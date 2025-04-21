@@ -1,24 +1,26 @@
-# README
+# 🎬 Portal de Filmes
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Um portal de filmes desenvolvido com **Ruby on Rails**, onde usuários podem visualizar detalhes dos filmes e avaliações médias baseadas nas notas fornecidas.
 
-Things you may want to cover:
+## 🚀 Funcionalidades
 
-* Ruby version
+- Listagem de filmes com pôster e nota média
+- Visualização individual de cada filme com sinopse e avaliações
+- Possibilidade de adicionar avaliações (nota e comentário)
+- Design simples e responsivo com Tailwind CSS
 
-* System dependencies
+## 🛠 Tecnologias Utilizadas
 
-* Configuration
+- Ruby on Rails 7
+- PostgreSQL
+- Tailwind CSS
+- JavaScript ES6
+- Hotwire (Turbo & Stimulus)
+- Deploy via Render
 
-* Database creation
+## 📦 Instalação Local
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/portal_filmes.git
+   cd portal_filmes
