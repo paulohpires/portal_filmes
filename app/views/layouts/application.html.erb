@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PortalFilmes</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+
+  <%= javascript_include_tag "application", type: "module", "data-turbo-track": "reload" %>
+</head>
+
+  <body class="bg-gray-100 text-gray-800">
+    <header class="bg-blue-700 text-white p-4 shadow">
+      <div class="container mx-auto flex justify-between items-center">
+        <h1 class="text-xl font-bold">🎬 Portal de Filmes</h1>
+        <nav>
+          <%= link_to 'Home', root_path, class: "text-white hover:underline" %>
+        </nav>
+
+
+
+        
+      </div>
+    </header>
+
+    <main class="container mx-auto mt-8">
+      <%= yield %>
+    </main>
+  </body>
+</html>

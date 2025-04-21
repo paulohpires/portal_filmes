@@ -1,0 +1,47 @@
+<div class="bg-white p-6 rounded-xl shadow-md">
+  <h2 class="text-3xl font-bold mb-2"><%= @movie.title %></h2>
+  <p class="text-gray-600 mb-2">Ano de lançamento: <%= @movie.release_year %></p>
+  <p class="text-gray-800 mb-4"><%= @movie.description %></p>
+
+  <% if @average_rating.present? %>
+    <p class="text-lg font-semibold text-blue-700">Média das Avaliações: <%= @average_rating %> ⭐</p>
+  <% else %>
+    <p class="text-gray-500 italic">Este filme ainda não possui avaliações.</p>
+  <% end %>
+</div>
+
+<% if @movie.reviews.any? %>
+  <div class="mt-8">
+    <h3 class="text-2xl font-semibold mb-4">Avaliações</h3>
+    <div class="space-y-4">
+      <% @movie.reviews.each do |review| %>
+        <div class="bg-gray-100 p-4 rounded-lg">
+          <p class="text-yellow-600 font-bold">Nota: <%= review.rating %> / 5</p>
+          <p class="text-gray-700 mt-1"><%= review.comment %></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+<% end %>
+
+<div class="mt-10">
+  <h3 class="text-2xl font-semibold mb-4">Deixe sua Avaliação</h3>
+
+  <%= form_with(model: [@movie, @movie.reviews.build], local: true) do |form| %>
+    <div class="mb-4">
+      <%= form.label :rating, "Nota (1 a 5)", class: "block text-gray-700 font-bold mb-2" %>
+      <%= form.number_field :rating, in: 1..5, class: "w-full border border-gray-300 rounded px-3 py-2" %>
+    </div>
+
+    <div class="mb-4">
+      <%= form.label :comment, "Comentário", class: "block text-gray-700 font-bold mb-2" %>
+      <%= form.text_area :comment, rows: 3, class: "w-full border border-gray-300 rounded px-3 py-2" %>
+    </div>
+
+    <%= form.submit "Enviar Avaliação", class: "bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700" %>
+  <% end %>
+</div>
+
+<div class="mt-6">
+  <%= link_to "← Voltar", root_path, class: "text-blue-600 hover:underline" %>
+</div>
