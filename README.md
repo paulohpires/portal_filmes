@@ -18,9 +18,4 @@ Um portal de filmes desenvolvido com **Ruby on Rails**, onde usuários podem vis
 - Hotwire (Turbo & Stimulus)
 - Deploy via Render
 
-## 📦 Instalação Local
 
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/seu-usuario/portal_filmes.git
-   cd portal_filmes
