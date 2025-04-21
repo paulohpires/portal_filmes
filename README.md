@@ -16,6 +16,3 @@ Um portal de filmes desenvolvido com **Ruby on Rails**, onde usuários podem vis
 - Tailwind CSS
 - JavaScript ES6
 - Hotwire (Turbo & Stimulus)
-- Deploy via Render
-
-
